@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vardhan Yerramsetti — Python Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Vardhan Yerramsetti — Python Full Stack Developer, AWS Certified Cloud Practitioner and Data Science enthusiast." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0a09'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23f2b45a' font-family='Georgia'>V</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ===== Film overlays ===== -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="leaks" aria-hidden="true"><i class="leak l1"></i><i class="leak l2"></i><i class="leak l3"></i></div>
+  <div class="scratches" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><em class="cursor-label"></em></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ===== Intro video ===== -->
+  <div class="leader" aria-hidden="true">
+    <video class="leader-video" id="introVideo" src="assets/intro.mp4" muted playsinline preload="auto"></video>
+    <div class="leader-bar top"></div>
+    <div class="leader-bar bottom"></div>
+    <div class="leader-flash"></div>
+    <button class="skip mono" type="button">Skip intro ⏭</button>
+  </div>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <a href="#top" class="nav-logo" data-cursor="Top">V<span>.</span>Y</a>
+    <nav class="nav-links">
+      <a href="#story" data-scramble>Story</a>
+      <a href="#work" data-scramble>Work</a>
+      <a href="#cast" data-scramble>Skills</a>
+      <a href="#journey" data-scramble>Journey</a>
+      <a href="#contact" data-scramble>Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="sound mono" type="button" aria-pressed="false" data-cursor="Sound">
+        <span class="sound-bars"><i></i><i></i><i></i><i></i></span><span class="sound-label">Sound off</span>
+      </button>
+      <div class="nav-rec mono"><span class="rec-dot"></span><span id="timecode">00:00:00:00</span></div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO: movie poster ===== -->
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/vardhan.webp" alt="Portrait of Vardhan Yerramsetti in a navy suit" width="1024" height="1536" />
+      </div>
+      <div class="hero-grade" aria-hidden="true"></div>
+      <canvas id="embers" aria-hidden="true"></canvas>
+
+      <div class="hero-credits-top mono">
+        <span>A Python Full Stack Production</span>
+        <span class="hide-sm">In association with AWS &amp; Data Science</span>
+      </div>
+
+      <div class="hero-side mono hide-sm">
+        <span>Starring</span>
+        <b>Vardhan Yerramsetti</b>
+      </div>
+
+      <div class="hero-title">
+        <p class="hero-kicker mono"><span class="pill">Now showing</span> Python Full Stack Developer · AWS Certified · Data Science</p>
+        <h1>
+          <span class="t-line"><span class="t-big split" data-text="VARDHAN">VARDHAN</span></span>
+          <span class="t-line t-line-script"><span class="t-script split">Yerramsetti</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-sub">
+            Building fast APIs, shipping machine-learning models to production and crafting
+            interfaces people enjoy — <em>8 live deployments</em> and counting.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary magnetic" data-cursor="Play"><span>▶ Watch the reel</span></a>
+            <a href="assets/Vardhan_Yerramsetti_Resume.pdf" class="btn btn-ghost magnetic" download data-cursor="Save"><span>Résumé ↓</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-billing mono hide-sm">
+        <span>Python</span><span>FastAPI</span><span>Flask</span><span>React</span><span>Next.js</span><span>AWS</span><span>Docker</span><span>MySQL</span><span>OpenCV</span>
+      </div>
+
+      <div class="lb lb-top" aria-hidden="true"></div>
+      <div class="lb lb-bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== CHAPTER I ===== -->
+    <section class="chapter" aria-label="Chapter one">
+      <div class="chapter-inner">
+        <p class="chapter-no mono">Chapter I</p>
+        <h2 class="chapter-title">The <em>Story</em></h2>
+        <p class="chapter-line mono">Andhra Pradesh, India — present day</p>
+      </div>
+    </section>
+
+    <!-- ===== STORY / ABOUT ===== -->
+    <section class="section story" id="story">
+      <div class="story-grid">
+        <div class="story-photo reveal-clip">
+          <img src="assets/vardhan.webp" alt="" loading="lazy" />
+          <span class="story-photo-tag mono">On set · 2026</span>
+        </div>
+        <div>
+          <p class="story-text" id="storyText">
+            I'm a developer who lives where software meets data. I build high-throughput APIs with Flask and FastAPI,
+            turn probabilistic and computer-vision models into real products, design databases that run 25% faster,
+            and wrap it all in interfaces built with React and Next.js.
+          </p>
+          <a class="avail mono" href="#contact"><b></b>Open to opportunities — let's talk</a>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="stat-num"><span data-count="8">0</span></div><p>Production deployments on AWS &amp; Vercel</p></div>
+        <div class="stat"><div class="stat-num">−<span data-count="25">0</span>%</div><p>Query latency cut with compound B-Tree indexes</p></div>
+        <div class="stat"><div class="stat-num">&gt;<span data-count="90">0</span>%</div><p>Facial-expression classification accuracy</p></div>
+        <div class="stat"><div class="stat-num">&lt;<span data-count="15">0</span>ms</div><p>Real-time customer-lifetime-value predictions</p></div>
+      </div>
+    </section>
+
+    <!-- ===== CHAPTER II ===== -->
+    <section class="chapter" aria-label="Chapter two">
+      <div class="chapter-inner">
+        <p class="chapter-no mono">Chapter II</p>
+        <h2 class="chapter-title">Now <em>Showing</em></h2>
+        <p class="chapter-line mono">Six features · all playing live</p>
+      </div>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section class="work" id="work">
+      <div class="work-ghost" aria-hidden="true">NOW SHOWING · NOW SHOWING · NOW SHOWING ·</div>
+      <div class="work-head">
+        <h2 class="section-title">Selected <em>features</em></h2>
+        <div class="work-counter mono"><span id="workIndex">01</span> / 06</div>
+      </div>
+      <div class="work-pin">
+        <div class="work-track" id="workTrack">
+
+          <article class="reel" style="--hue: 32">
+            <a class="reel-screen" href="https://task-cloud-portal.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/cloud-portal.jpg" alt="Screenshot of the Task Cloud Portal" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">01</span>
+              <p class="reel-genre mono">Cloud · Multi-tenant · DevOps</p>
+              <h3>Task &amp; Data Management Cloud Portal</h3>
+              <p>Multi-tenant portal with strict organisation data isolation. Compound B-Tree indexes cut queries from 18.4ms to 13.8ms; files live in S3, everything runs in Docker on EC2.</p>
+              <ul class="tags"><li>Flask</li><li>React</li><li>MySQL</li><li>AWS EC2/S3</li><li>Docker</li></ul>
+              <div class="reel-links">
+                <a href="https://task-cloud-portal.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/task-cloud-portal" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reel" style="--hue: 200">
+            <a class="reel-screen" href="https://omni-pulse-enterprise-clv-churn-int-teal.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/omnipulse.jpg" alt="Screenshot of the OmniPulse dashboard" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">02</span>
+              <p class="reel-genre mono">Machine Learning · Prediction</p>
+              <h3>OmniPulse — CLV &amp; Retention Engine</h3>
+              <p>BG/NBD models score every customer's real-time P(Alive); Gamma-Gamma sub-models forecast 12-month lifetime value in under 15ms through validated FastAPI endpoints.</p>
+              <ul class="tags"><li>FastAPI</li><li>Scikit-learn</li><li>BG/NBD</li><li>Gamma-Gamma</li></ul>
+              <div class="reel-links">
+                <a href="https://omni-pulse-enterprise-clv-churn-int-teal.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/OmniPulse-Enterprise-CLV-Churn-Intelligence-Engine" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reel" style="--hue: 270">
+            <a class="reel-screen" href="https://music-recommending.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/music.jpg" alt="Screenshot of the MoodHarmonics music recommender" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">03</span>
+              <p class="reel-genre mono">Computer Vision · Music</p>
+              <h3>MoodHarmonics — Emotion Music Recommender</h3>
+              <p>Reads your facial expression from a live webcam stream with &gt;90% accuracy and plays music that matches the mood — low-latency OpenCV landmarks under a Flask API.</p>
+              <ul class="tags"><li>Flask</li><li>OpenCV</li><li>Scikit-learn</li><li>WebRTC</li></ul>
+              <div class="reel-links">
+                <a href="https://music-recommending.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/music-recommending" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reel" style="--hue: 150">
+            <a class="reel-screen" href="https://90-days-body-transformation.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/body.jpg" alt="Screenshot of the 90-Day Transformation suite" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">04</span>
+              <p class="reel-genre mono">Data Viz · 3D WebGL</p>
+              <h3>90-Day Body Transformation Suite</h3>
+              <p>Turns body measurements over time into interactive Plotly 3D surfaces, with smoothing algorithms, 360° rotation and timeline sliders to explore progress.</p>
+              <ul class="tags"><li>Python</li><li>Plotly 3D</li><li>JavaScript</li></ul>
+              <div class="reel-links">
+                <a href="https://90-days-body-transformation.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/90-Days-Body-Transformation" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reel" style="--hue: 38">
+            <a class="reel-screen" href="https://svt-tailors.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/svt.jpg" alt="Screenshot of the S.V.T. Tailors website" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">05</span>
+              <p class="reel-genre mono">Full Stack · Serverless</p>
+              <h3>S.V.T. Tailors — Bespoke Atelier</h3>
+              <p>A digital atelier with a garment customiser and a 5-stage workshop tracker — Logged → Cut → Stitch → Press → Ready — plus public order tracking at &lt;35ms.</p>
+              <ul class="tags"><li>Python Serverless</li><li>MySQL</li><li>React</li><li>Tailwind</li></ul>
+              <div class="reel-links">
+                <a href="https://svt-tailors.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/S.V.T.Tailors" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reel" style="--hue: 14">
+            <a class="reel-screen" href="https://ms-pickles.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+              <img src="assets/shots/pickles.jpg" alt="Screenshot of the MS Pickles store" loading="lazy" />
+              <span class="reel-play">▶</span>
+            </a>
+            <div class="reel-info">
+              <span class="reel-no">06</span>
+              <p class="reel-genre mono">E-Commerce</p>
+              <h3>MS Pickles — Artisanal Andhra Store</h3>
+              <p>Mobile-first store with flavour filters, a persistent cart and live pricing — tuned rendering for sub-second first paint.</p>
+              <ul class="tags"><li>JavaScript</li><li>Tailwind</li><li>LocalStorage</li><li>Vercel</li></ul>
+              <div class="reel-links">
+                <a href="https://ms-pickles.vercel.app" target="_blank" rel="noopener" data-cursor="Live">Live ↗</a>
+                <a href="https://github.com/vardhanyerramsetti71beep/MS-pickles" target="_blank" rel="noopener" data-cursor="Code">Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAST (skills) ===== -->
+    <section class="section cast" id="cast">
+      <p class="eyebrow mono">The cast</p>
+      <h2 class="section-title">Starring <em>the toolkit</em></h2>
+      <ul class="cast-list">
+        <li class="cast-row"><span class="cast-role mono">as The Languages</span><span class="cast-name">Python · JavaScript · SQL · C++</span><span class="cast-extra mono">HTML5 · CSS3 · ES6+</span></li>
+        <li class="cast-row"><span class="cast-role mono">as The Backend</span><span class="cast-name">Flask · FastAPI · Django</span><span class="cast-extra mono">REST · Serverless · JWT</span></li>
+        <li class="cast-row"><span class="cast-role mono">as The Brains</span><span class="cast-name">Scikit-learn · OpenCV · BG/NBD</span><span class="cast-extra mono">Gamma-Gamma · Plotly 3D</span></li>
+        <li class="cast-row"><span class="cast-role mono">as The Cloud</span><span class="cast-name">AWS · Docker · Vercel</span><span class="cast-extra mono">EC2 · S3 · RDS · Lambda · IAM</span></li>
+        <li class="cast-row"><span class="cast-role mono">as The Memory</span><span class="cast-name">MySQL · PyMySQL</span><span class="cast-extra mono">3NF · B-Tree indexing</span></li>
+        <li class="cast-row"><span class="cast-role mono">as The Face</span><span class="cast-name">React 19 · Next.js · Tailwind</span><span class="cast-extra mono">SPAs · DOM</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== CHAPTER III ===== -->
+    <section class="chapter" aria-label="Chapter three">
+      <div class="chapter-inner">
+        <p class="chapter-no mono">Chapter III</p>
+        <h2 class="chapter-title">The <em>Journey</em></h2>
+        <p class="chapter-line mono">Every scene taught something</p>
+      </div>
+    </section>
+
+    <!-- ===== JOURNEY (experience) ===== -->
+    <section class="section journey" id="journey">
+      <div class="timeline">
+        <div class="timeline-line"><span></span></div>
+
+        <article class="scene">
+          <div class="scene-meta mono"><span class="scene-take">Take 03</span>Jan 2026 — Apr 2026</div>
+          <div class="scene-body">
+            <h3>Operations &amp; Logistics Associate</h3>
+            <p class="scene-co">Instakart Services Pvt. Ltd. (Flipkart Logistics)</p>
+            <ul>
+              <li>Supervised real-time warehouse operations, dispatch and inventory databases at 99% data integrity.</li>
+              <li>Removed bottlenecks between ground teams and dispatch systems for a 15% increase in throughput.</li>
+              <li>Ran root-cause audits across fulfilment pipelines to reduce order variance and transit delays.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="scene">
+          <div class="scene-meta mono"><span class="scene-take">Take 02</span>Aug 2022 — Jan 2023</div>
+          <div class="scene-body">
+            <h3>Direct Marketing Coordinator</h3>
+            <p class="scene-co">Future Generali Total Health Insurance</p>
+            <ul>
+              <li>Ran targeted digital campaigns across multiple channels, reaching 5,000+ prospective leads.</li>
+              <li>Analysed conversion and demographic funnels for a 10% uplift in qualified leads.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="scene">
+          <div class="scene-meta mono"><span class="scene-take">Take 01</span>Jun 2022 — Aug 2022</div>
+          <div class="scene-body">
+            <h3>Teaching Assistant — Computer Science</h3>
+            <p class="scene-co">Sri Srinivasa Gravity Junior College</p>
+            <ul>
+              <li>Mentored 40+ engineering aspirants in CS fundamentals, OOP and problem-solving.</li>
+              <li>Led weekly hands-on debugging labs in Python and C++.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== END CREDITS ===== -->
+    <section class="credits" aria-label="Education and certifications">
+      <div class="credits-window">
+        <div class="credits-roll" id="creditsRoll">
+          <p class="cr-title">Vardhan Yerramsetti</p>
+          <p class="cr-sub mono">in</p>
+          <p class="cr-title italic">“The Full Stack”</p>
+
+          <div class="cr-block"><span class="mono">Directed, written &amp; coded by</span><b>Vardhan Yerramsetti</b></div>
+          <div class="cr-block"><span class="mono">Trained at</span><b>Jawaharlal Nehru Technological University, Kakinada</b><small>B.Tech — Computer Science &amp; Engineering · 2018 – 2026 · CGPA 6.5</small></div>
+          <div class="cr-block"><span class="mono">Core studies</span><b>Data Structures · DBMS · Operating Systems · Computer Networks</b></div>
+
+          <p class="cr-head mono">Certified by</p>
+          <div class="cr-pair"><span>AWS Certified Cloud Practitioner</span><b>Amazon Web Services · 2023</b></div>
+          <div class="cr-pair"><span>AWS Academy Graduate: Cloud Foundations</span><b>Amazon Web Services · 2023</b></div>
+          <div class="cr-pair"><span>Android Enterprise Associate</span><b>Google · 2022</b></div>
+          <div class="cr-pair"><span>Networking Essentials</span><b>Cisco Networking Academy · 2022</b></div>
+
+          <p class="cr-head mono">Filmed on location</p>
+          <div class="cr-pair"><span>Production servers</span><b>AWS · Vercel</b></div>
+          <div class="cr-pair"><span>Andhra Pradesh</span><b>India</b></div>
+
+          <p class="cr-head mono">Special thanks</p>
+          <div class="cr-pair"><span>You</span><b>for watching till the end</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <p class="eyebrow mono">Post-credits scene</p>
+      <h2 class="contact-title">
+        <span class="t-line"><span class="split">The sequel</span></span>
+        <span class="t-line"><span class="split italic">stars you.</span></span>
+      </h2>
+      <a href="mailto:vardhanyerramsetti71@gmail.com" class="contact-mail magnetic" data-cursor="Email">vardhanyerramsetti71@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://github.com/vardhanyerramsetti71beep" target="_blank" rel="noopener" class="magnetic" data-cursor="Open">GitHub ↗</a>
+        <a href="https://linkedin.com/in/vardhan-yerramsetti" target="_blank" rel="noopener" class="magnetic" data-cursor="Open">LinkedIn ↗</a>
+        <a href="tel:+917386033417" class="magnetic" data-cursor="Call">+91 73860 33417</a>
+        <a href="assets/Vardhan_Yerramsetti_Resume.pdf" download class="magnetic" data-cursor="Save">Résumé ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="fin">Fin.</p>
+    <p class="mono dim">© <span id="year">2026</span> Vardhan Yerramsetti · No pixels were harmed</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
