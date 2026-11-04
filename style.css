@@ -227,6 +227,13 @@ em, .italic { font-family: var(--serif); font-style: italic; font-weight: 400; }
 }
 .reel::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(600px circle at 30% 0%, color-mix(in srgb, var(--c) 14%, transparent), transparent 60%); }
 .reel-screen { position: relative; display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 16 / 10; background: #000; box-shadow: 0 30px 80px -20px color-mix(in srgb, var(--c) 45%, transparent); }
+.reel-screen--crunchlab { background: radial-gradient(circle at 70% 25%, #ffcc45 0 4%, transparent 4.5%), linear-gradient(145deg, #f35422 0%, #e72c21 47%, #f79724 100%); color: #1b1511; }
+.crunchlab-mark { position: absolute; top: 8%; left: 8%; font-size: clamp(1rem, 2vw, 1.9rem); font-weight: 700; letter-spacing: -.08em; }
+.crunchlab-copy { position: absolute; bottom: 10%; left: 8%; font-family: var(--display); font-size: clamp(2rem, 5vw, 5.5rem); line-height: .82; text-transform: uppercase; }
+.crunchlab-chip { position: absolute; display: block; width: 22%; aspect-ratio: 1; border-radius: 47% 53% 52% 48%; background: radial-gradient(circle at 36% 32%, #ffe49d 0 7%, transparent 8%), radial-gradient(circle at 63% 62%, #be5918 0 4%, transparent 5%), linear-gradient(135deg, #ffd66a, #ee8c23); box-shadow: inset -10px -12px 18px #bc571b, 0 10px 25px rgba(79, 24, 7, .28); }
+.chip-a { top: 16%; right: 14%; transform: rotate(25deg); }
+.chip-b { top: 47%; right: 5%; width: 15%; transform: rotate(-25deg); }
+.chip-c { top: 7%; right: 3%; width: 12%; transform: rotate(55deg); }
 .reel-screen::before { content: ""; position: absolute; z-index: 2; left: 0; right: 0; top: 0; height: 12px; background: radial-gradient(circle at 9px 6px, #000 2.5px, transparent 3px) 0 0 / 20px 12px repeat-x, rgba(0,0,0,.7); }
 .reel-screen::after { content: ""; position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 12px; background: radial-gradient(circle at 9px 6px, #000 2.5px, transparent 3px) 0 0 / 20px 12px repeat-x, rgba(0,0,0,.7); }
 .reel-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; transform: scale(1.04); transition: transform 1.2s var(--ease), filter .6s; filter: saturate(.9) brightness(.85); }
