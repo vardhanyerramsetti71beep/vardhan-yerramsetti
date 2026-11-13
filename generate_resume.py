@@ -16,29 +16,34 @@ s.add(ParagraphStyle(name="Meta", parent=s["Normal"], fontName="Helvetica-Obliqu
 def p(text, style="Body"): return Paragraph(text, s[style])
 def bullets(items): return [p("• " + item) for item in items]
 
+LINK_COLOR = "#1557C0"
+def a(text, url=None):
+    """A clickable, blue, underlined link. With no url, the text is the address."""
+    return f'<a href="{url or "https://" + text}" color="{LINK_COLOR}"><u>{text}</u></a>'
+
 story = [
     p("VARDHAN YERRAMSETTI", "Name"),
     p("Python Full Stack Developer | AWS Certified Cloud Practitioner | Data Science", "Sub"),
-    p("+91 7386033417 | vardhanyerramsetti71@gmail.com | Andhra Pradesh, India<br/>vardhan-yerramsetti.vercel.app | github.com/vardhanyerramsetti71beep | linkedin.com/in/vardhan-yerramsetti", "Sub"),
+    p(f"{a('+91 7386033417', 'tel:+917386033417')} | {a('vardhanyerramsetti71@gmail.com', 'mailto:vardhanyerramsetti71@gmail.com')} | Andhra Pradesh, India<br/>{a('vardhan-yerramsetti.vercel.app')} | {a('github.com/vardhanyerramsetti71beep')} | {a('linkedin.com/in/vardhan-yerramsetti', 'https://www.linkedin.com/in/vardhan-yerramsetti')}", "Sub"),
     p("PROFESSIONAL SUMMARY", "Head"),
     p("Python Full Stack Developer experienced in production APIs, cloud-hosted data products and interactive web experiences. Skilled in Flask, FastAPI, React, AWS, SQL optimization, machine learning and creative WebGL development. Delivered 10 live projects across Vercel and AWS."),
     p("TECHNICAL SKILLS", "Head"),
     p("<b>Languages:</b> Python, JavaScript (ES6+), SQL, C++, HTML5, CSS3<br/><b>Frontend & Creative Dev:</b> React, Next.js, Vite, Three.js, GSAP, ScrollTrigger, Lenis, Tailwind CSS<br/><b>Backend & Data:</b> Flask, FastAPI, Django, REST APIs, MySQL, PyMySQL, JWT, Scikit-learn, OpenCV<br/><b>Cloud & DevOps:</b> AWS (EC2, S3, RDS, Lambda, IAM), Docker, Vercel, Git/GitHub"),
     p("SELECTED TECHNICAL PROJECTS", "Head"),
     p("Vignesh Traders — Car Care Studio Website", "Project"),
-    p("HTML5, CSS3, JavaScript (ES6+), Inline SVG, Vercel | Live: vignesh-traders.vercel.app | Code: github.com/vardhanyerramsetti71beep/vignesh-traders", "Meta"),
+    p(f"HTML5, CSS3, JavaScript (ES6+), Inline SVG, Vercel | Live: {a('vignesh-traders.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/vignesh-traders')}", "Meta"),
     *bullets(["Designed and built the website for a car care and detailing studio in Vijayawada: 8 services, 3 fixed-price packages and a no-backend booking flow that hands off to WhatsApp.", "Built a scroll-driven SVG scene, drawn entirely in code, where a car is washed outside and inside; scroll position drives clip paths, a mask and a camera zoom via requestAnimationFrame.", "Shipped with zero dependencies and no build step, with reduced-motion and no-JavaScript fallbacks."]),
     p("CrunchLab — 3D Product Experience", "Project"),
-    p("Vite, Three.js, GSAP ScrollTrigger, Lenis, JavaScript, CSS | Live: crunchlab-blond.vercel.app | Code: github.com/vardhanyerramsetti71beep/crunchlab", "Meta"),
+    p(f"Vite, Three.js, GSAP ScrollTrigger, Lenis, JavaScript, CSS | Live: {a('crunchlab-blond.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/crunchlab')}", "Meta"),
     *bullets(["Created a scroll-driven 3D product site with a cinematic chip-storm loader, interactive hero carousel, flavour wall and build-your-own 3-pack experience.", "Generated all six product-pack visuals in code using canvases and real-time Three.js meshes, eliminating image and model assets.", "Added responsive motion controls that respect prefers-reduced-motion, including scroll, swipe, keyboard and autoplay interactions."]),
     p("Scalable Task & Data Management Cloud Portal", "Project"),
-    p("Python, Flask REST API, React, MySQL, AWS EC2/S3, Docker | Live: task-cloud-portal.vercel.app", "Meta"),
+    p(f"Python, Flask REST API, React, MySQL, AWS EC2/S3, Docker | Live: {a('task-cloud-portal.vercel.app')}", "Meta"),
     *bullets(["Built a multi-tenant cloud portal with strict organisation-level isolation across tasks, files and audit logs.", "Engineered compound MySQL B-Tree indexes that reduced query execution from 18.4 ms to 13.8 ms.", "Decoupled binary storage into Amazon S3 and deployed containerized services on EC2 with Docker."]),
     p("OmniPulse — CLV & Retention Engine", "Project"),
-    p("FastAPI, Scikit-learn, BG/NBD, Gamma-Gamma, Python | Live: omni-pulse-enterprise-clv-churn-int-teal.vercel.app", "Meta"),
+    p(f"FastAPI, Scikit-learn, BG/NBD, Gamma-Gamma, Python | Live: {a('omni-pulse-enterprise-clv-churn-int-teal.vercel.app')}", "Meta"),
     *bullets(["Implemented BG/NBD and Gamma-Gamma models for real-time customer vitality and 12-month lifetime-value predictions.", "Delivered validated FastAPI inference endpoints with sub-15 ms prediction latency for churn-risk triage."]),
     p("MoodHarmonics — Emotion Music Recommender", "Project"),
-    p("Python, Flask, OpenCV, Scikit-learn, WebRTC | Live: music-recommending.vercel.app", "Meta"),
+    p(f"Python, Flask, OpenCV, Scikit-learn, WebRTC | Live: {a('music-recommending.vercel.app')}", "Meta"),
     *bullets(["Built a webcam-based facial-expression pipeline with over 90% classification accuracy and targeted music recommendations.", "Optimized OpenCV frame processing and Flask endpoints for low-latency live interaction."]),
     p("WORK EXPERIENCE", "Head"),
     p("Operations & Logistics Associate — Instakart Services Pvt. Ltd. (Flipkart Logistics) | Jan 2026 – Apr 2026", "Project"),
