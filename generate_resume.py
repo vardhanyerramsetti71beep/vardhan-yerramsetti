@@ -30,7 +30,7 @@ story = [
     p("TECHNICAL SKILLS", "Head"),
     p("<b>Languages:</b> Python, JavaScript (ES6+), SQL, C++, HTML5, CSS3<br/><b>Frontend & Creative Dev:</b> React, Next.js, Vite, Three.js, GSAP, ScrollTrigger, Lenis, Tailwind CSS<br/><b>Backend & Data:</b> Flask, FastAPI, Django, REST APIs, MySQL, PyMySQL, JWT, Scikit-learn, OpenCV<br/><b>Cloud & DevOps:</b> AWS (EC2, S3, RDS, Lambda, IAM), Docker, Vercel, Git/GitHub"),
     p("SELECTED TECHNICAL PROJECTS", "Head"),
-    p("AMARA — Jewellery Concept Site (adapted and rebranded)", "Project"),
+    p("AMARA — Jewellery Concept Site", "Project"),
     p(f"Python, OpenCV, GSAP ScrollTrigger, Lenis, Vercel | Live: {a('amara-jewellery-five.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/amara-jewellery')}", "Meta"),
     *bullets(["Rebranded an existing scroll-driven jewellery concept (original author credited): wrote a Python + OpenCV pipeline that re-lettered the brand name on 183 rendered ring-box frames, built the hero film from 61 turntable frames, and fixed and extended the storefront."]),
     p("Vignesh Traders — Car Care Studio Website", "Project"),
