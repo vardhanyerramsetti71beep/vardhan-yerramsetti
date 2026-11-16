@@ -8,9 +8,9 @@ OUT = "assets/Vardhan_Yerramsetti_Resume.pdf"
 s = getSampleStyleSheet()
 s.add(ParagraphStyle(name="Name", parent=s["Title"], fontName="Helvetica-Bold", fontSize=20, leading=23, textColor=colors.HexColor("#14213D"), spaceAfter=2))
 s.add(ParagraphStyle(name="Sub", parent=s["Normal"], fontSize=9, leading=12, textColor=colors.HexColor("#46515f"), spaceAfter=8))
-s.add(ParagraphStyle(name="Head", parent=s["Heading2"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=colors.HexColor("#14213D"), spaceBefore=8, spaceAfter=3))
+s.add(ParagraphStyle(name="Head", parent=s["Heading2"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=colors.HexColor("#14213D"), spaceBefore=6, spaceAfter=3))
 s.add(ParagraphStyle(name="Body", parent=s["Normal"], fontSize=8.4, leading=10.5, spaceAfter=2))
-s.add(ParagraphStyle(name="Project", parent=s["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=11, textColor=colors.HexColor("#14213D"), spaceBefore=4, spaceAfter=1))
+s.add(ParagraphStyle(name="Project", parent=s["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=11, textColor=colors.HexColor("#14213D"), spaceBefore=3, spaceAfter=1))
 s.add(ParagraphStyle(name="Meta", parent=s["Normal"], fontName="Helvetica-Oblique", fontSize=7.6, leading=9.5, textColor=colors.HexColor("#46515f"), spaceAfter=2))
 
 def p(text, style="Body"): return Paragraph(text, s[style])
@@ -26,10 +26,13 @@ story = [
     p("Python Full Stack Developer | AWS Certified Cloud Practitioner | Data Science", "Sub"),
     p(f"{a('+91 7386033417', 'tel:+917386033417')} | {a('vardhanyerramsetti71@gmail.com', 'mailto:vardhanyerramsetti71@gmail.com')} | Andhra Pradesh, India<br/>{a('vardhan-yerramsetti.vercel.app')} | {a('github.com/vardhanyerramsetti71beep')} | {a('linkedin.com/in/vardhan-yerramsetti', 'https://www.linkedin.com/in/vardhan-yerramsetti')}", "Sub"),
     p("PROFESSIONAL SUMMARY", "Head"),
-    p("Python Full Stack Developer experienced in production APIs, cloud-hosted data products and interactive web experiences. Skilled in Flask, FastAPI, React, AWS, SQL optimization, machine learning and creative WebGL development. Delivered 10 live projects across Vercel and AWS."),
+    p("Python Full Stack Developer experienced in production APIs, cloud-hosted data products and interactive web experiences. Skilled in Flask, FastAPI, React, AWS, SQL optimization, machine learning and creative WebGL development. Delivered 11 live projects across Vercel and AWS."),
     p("TECHNICAL SKILLS", "Head"),
     p("<b>Languages:</b> Python, JavaScript (ES6+), SQL, C++, HTML5, CSS3<br/><b>Frontend & Creative Dev:</b> React, Next.js, Vite, Three.js, GSAP, ScrollTrigger, Lenis, Tailwind CSS<br/><b>Backend & Data:</b> Flask, FastAPI, Django, REST APIs, MySQL, PyMySQL, JWT, Scikit-learn, OpenCV<br/><b>Cloud & DevOps:</b> AWS (EC2, S3, RDS, Lambda, IAM), Docker, Vercel, Git/GitHub"),
     p("SELECTED TECHNICAL PROJECTS", "Head"),
+    p("AMARA — Jewellery Concept Site (adapted and rebranded)", "Project"),
+    p(f"Python, OpenCV, GSAP ScrollTrigger, Lenis, Vercel | Live: {a('amara-jewellery-five.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/amara-jewellery')}", "Meta"),
+    *bullets(["Rebranded an existing scroll-driven jewellery concept (original author credited): wrote a Python + OpenCV pipeline that re-lettered the brand name on 183 rendered ring-box frames, built the hero film from 61 turntable frames, and fixed and extended the storefront."]),
     p("Vignesh Traders — Car Care Studio Website", "Project"),
     p(f"HTML5, CSS3, JavaScript (ES6+), Inline SVG, Vercel | Live: {a('vignesh-traders.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/vignesh-traders')}", "Meta"),
     *bullets(["Designed and built the website for a car care and detailing studio in Vijayawada: 8 services, 3 fixed-price packages and a no-backend booking flow that hands off to WhatsApp.", "Built a scroll-driven SVG scene, drawn entirely in code, where a car is washed outside and inside; scroll position drives clip paths, a mask and a camera zoom via requestAnimationFrame.", "Shipped with zero dependencies and no build step, with reduced-motion and no-JavaScript fallbacks."]),
@@ -56,5 +59,5 @@ story = [
     p("B.Tech, Computer Science & Engineering — Jawaharlal Nehru Technological University, Kakinada (2018–2026) | CGPA: 6.5/10<br/>AWS Certified Cloud Practitioner (2023) | AWS Academy Graduate: Cloud Foundations (2023) | Android Enterprise Associate, Google (2022) | Networking Essentials, Cisco (2022)")
 ]
 
-SimpleDocTemplate(OUT, pagesize=A4, rightMargin=15*mm, leftMargin=15*mm, topMargin=12*mm, bottomMargin=12*mm).build(story)
+SimpleDocTemplate(OUT, pagesize=A4, rightMargin=15*mm, leftMargin=15*mm, topMargin=10*mm, bottomMargin=10*mm).build(story)
 print(f"Created {OUT}")
