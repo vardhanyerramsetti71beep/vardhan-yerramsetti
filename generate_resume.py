@@ -8,10 +8,10 @@ OUT = "assets/Vardhan_Yerramsetti_Resume.pdf"
 s = getSampleStyleSheet()
 s.add(ParagraphStyle(name="Name", parent=s["Title"], fontName="Helvetica-Bold", fontSize=20, leading=23, textColor=colors.HexColor("#14213D"), spaceAfter=2))
 s.add(ParagraphStyle(name="Sub", parent=s["Normal"], fontSize=9, leading=12, textColor=colors.HexColor("#46515f"), spaceAfter=8))
-s.add(ParagraphStyle(name="Head", parent=s["Heading2"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=colors.HexColor("#14213D"), spaceBefore=6, spaceAfter=3))
-s.add(ParagraphStyle(name="Body", parent=s["Normal"], fontSize=8.4, leading=10.5, spaceAfter=2))
-s.add(ParagraphStyle(name="Project", parent=s["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=11, textColor=colors.HexColor("#14213D"), spaceBefore=3, spaceAfter=1))
-s.add(ParagraphStyle(name="Meta", parent=s["Normal"], fontName="Helvetica-Oblique", fontSize=7.6, leading=9.5, textColor=colors.HexColor("#46515f"), spaceAfter=2))
+s.add(ParagraphStyle(name="Head", parent=s["Heading2"], fontName="Helvetica-Bold", fontSize=10, leading=13, textColor=colors.HexColor("#14213D"), spaceBefore=5, spaceAfter=3))
+s.add(ParagraphStyle(name="Body", parent=s["Normal"], fontSize=8.4, leading=10.3, spaceAfter=1.5))
+s.add(ParagraphStyle(name="Project", parent=s["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=11, textColor=colors.HexColor("#14213D"), spaceBefore=2, spaceAfter=1))
+s.add(ParagraphStyle(name="Meta", parent=s["Normal"], fontName="Helvetica-Oblique", fontSize=7.6, leading=9.5, textColor=colors.HexColor("#46515f"), spaceAfter=1.5))
 
 def p(text, style="Body"): return Paragraph(text, s[style])
 def bullets(items): return [p("• " + item) for item in items]
@@ -26,10 +26,13 @@ story = [
     p("Python Full Stack Developer | AWS Certified Cloud Practitioner | Data Science", "Sub"),
     p(f"{a('+91 7386033417', 'tel:+917386033417')} | {a('vardhanyerramsetti71@gmail.com', 'mailto:vardhanyerramsetti71@gmail.com')} | Andhra Pradesh, India<br/>{a('vardhan-yerramsetti.vercel.app')} | {a('github.com/vardhanyerramsetti71beep')} | {a('linkedin.com/in/vardhan-yerramsetti', 'https://www.linkedin.com/in/vardhan-yerramsetti')}", "Sub"),
     p("PROFESSIONAL SUMMARY", "Head"),
-    p("Python Full Stack Developer experienced in production APIs, cloud-hosted data products and interactive web experiences. Skilled in Flask, FastAPI, React, AWS, SQL optimization, machine learning and creative WebGL development. Delivered 12 live projects across Vercel and AWS."),
+    p("Python Full Stack Developer experienced in production APIs, cloud-hosted data products and interactive web experiences. Skilled in Flask, FastAPI, React, AWS, SQL optimization, machine learning and creative WebGL development. Delivered 13 live projects across Vercel and AWS."),
     p("TECHNICAL SKILLS", "Head"),
-    p("<b>Languages:</b> Python, JavaScript (ES6+), SQL, C++, HTML5, CSS3<br/><b>Frontend & Creative Dev:</b> React, Next.js, Vite, Three.js, GSAP, ScrollTrigger, Lenis, Tailwind CSS<br/><b>Backend & Data:</b> Flask, FastAPI, Django, REST APIs, MySQL, PyMySQL, JWT, Scikit-learn, OpenCV<br/><b>Cloud & DevOps:</b> AWS (EC2, S3, RDS, Lambda, IAM), Docker, Vercel, Git/GitHub"),
+    p("<b>Languages:</b> Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3<br/><b>Frontend & Creative Dev:</b> React, Next.js, Vite, Three.js, GSAP, ScrollTrigger, Lenis, Tailwind CSS<br/><b>Backend & Data:</b> Flask, FastAPI, Django, REST APIs, MySQL, PyMySQL, JWT, Scikit-learn, OpenCV<br/><b>Cloud & DevOps:</b> AWS (EC2, S3, RDS, Lambda, IAM), Docker, Vercel, Git/GitHub"),
     p("SELECTED TECHNICAL PROJECTS", "Head"),
+    p("SALTLINE — Playable 3D Road Game Teaser", "Project"),
+    p(f"React, TypeScript, Three.js, Web Audio API, Vite, Vercel | Live: {a('saltline-one.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/saltline')}", "Meta"),
+    *bullets(["Built a 3D browser driving game with a car garage and synthesized radio, with all art and sound generated in code."]),
     p("MS Dhoni — Cricket Career Tribute Site", "Project"),
     p(f"HTML5, CSS3, JavaScript, SVG, Vercel | Live: {a('ms-dhoni-tribute.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/ms-dhoni-tribute')}", "Meta"),
     *bullets(["Built a cricket stats site: captaincy win/loss charts, an interactive 19-season IPL chart and lazy-loaded official clips."]),
