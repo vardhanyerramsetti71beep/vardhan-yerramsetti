@@ -32,7 +32,7 @@ story = [
     p("SELECTED TECHNICAL PROJECTS", "Head"),
     p("SALTLINE — Playable 3D Road Game Teaser", "Project"),
     p(f"React, TypeScript, Three.js, Web Audio API, Vite, Vercel | Live: {a('saltline-one.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/saltline')}", "Meta"),
-    *bullets(["Built a 3D browser driving game with a car garage and synthesized radio, with all art and sound generated in code."]),
+    *bullets(["Built a 3D browser driving game with 4 levels, a coin shop for 9 vehicles and a synthesized radio; all art and sound made in code."]),
     p("MS Dhoni — Cricket Career Tribute Site", "Project"),
     p(f"HTML5, CSS3, JavaScript, SVG, Vercel | Live: {a('ms-dhoni-tribute.vercel.app')} | Code: {a('github.com/vardhanyerramsetti71beep/ms-dhoni-tribute')}", "Meta"),
     *bullets(["Built a cricket stats site: captaincy win/loss charts, an interactive 19-season IPL chart and lazy-loaded official clips."]),
